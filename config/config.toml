@@ -1,0 +1,2 @@
+[Rabbit]
+connection_rabbit = "amqp://guest:guest@localhost:5672/"
