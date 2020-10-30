@@ -4,6 +4,7 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/Sterks/rXML/config"
 	"github.com/Sterks/rXML/services"
+	"os"
 )
 
 func main() {
@@ -11,12 +12,21 @@ func main() {
 }
 
 func MainReader() {
-	configPath := "config/config.toml"
+	configPath := ""
+	getenv := os.Getenv("APPLICATION")
+	if getenv == "production" {
+		configPath = "config/config.prod.toml"
+	} else {
+		configPath = "config/config.toml"
+	}
 	conf := config.NewConfig()
 	toml.DecodeFile(configPath, &conf)
 
-	parser := services.NewXMLNotification()
-	services.Do(parser, conf)
+	//parser := services.NewXMLNotification()
+	//services.Do(parser, conf)
+
+	proto44 := services.NewProtocol44()
+	services.Do(proto44, conf)
 }
 
 // MainReader ...

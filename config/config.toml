@@ -1,8 +1,8 @@
 [Rabbit]
-connection_rabbit = "amqp://guest:guest@mongodb:5672/"
+connection_rabbit = "amqp://guest:guest@127.0.0.1:5672/"
 
 [mongoDB]
-connect_mongo = "mongodb://xml:rootpassword@mongodb:27017/?authSource=readerXML"
+connect_mongo = "mongodb://root:rootpassword@127.0.0.1:27017/?authSource=admin"
 
 [MainSettings]
 log_level = "debug"
