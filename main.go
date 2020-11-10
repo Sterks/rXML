@@ -22,11 +22,22 @@ func MainReader() {
 	conf := config.NewConfig()
 	toml.DecodeFile(configPath, &conf)
 
-	//parser := services.NewXMLNotification()
-	//services.Do(parser, conf)
-
-	proto44 := services.NewProtocol44()
-	services.Do(proto44, conf)
+	c := make(chan bool)
+	//go func() {
+	//	parser := services.NewNotification44()
+	//	services.Do(parser, conf)
+	//}()
+	//
+	//go func() {
+	//	proto44 := services.NewProtocol44()
+	//	services.Do(proto44, conf)
+	//}()
+	//
+	go func() {
+		not223 := services.NewNotifications223()
+		services.Do(not223, conf)
+	}()
+	<-c
 }
 
 // MainReader ...

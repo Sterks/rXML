@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
+	"github.com/Sterks/rXML/notifications223"
 	"github.com/Sterks/rXML/protocols44"
 	"log"
 	"os"
@@ -46,6 +47,8 @@ func (c *ConsumerMQ) ConsumerMQNow(config *config.Config, nameQueue string) <-ch
 			c.ChooseTemlateNotification44(msqs, inf, m)
 		} else if nameQueue == "Protocols44OpenFile" {
 			c.ChooseTemlateProtocol44(msqs, inf, m)
+		} else if nameQueue == "Notifications223OpenFile" {
+			c.ChooseTemlateNotification223(msqs, inf, m)
 		}
 	}()
 	<-stopChan
@@ -125,6 +128,112 @@ func (c *ConsumerMQ) ChooseTemlateNotification44(msqs <-chan amqp.Delivery, inf 
 					xml.Unmarshal(inf.FileZip, &oku504)
 					// fmt.Println(oku504)
 					m.Save("readerXML", "xml_notification", &oku504)
+				default:
+					fmt.Println("Не могу определить тип извещения", typeNot)
+				}
+				fmt.Println(inf.NameFile)
+			}
+		}
+		if err := message.Ack(false); err != nil {
+			log.Printf("Error acknowledging message : %s", err)
+		} else {
+			log.Printf("Acknowledged message - %v", inf.NameFile)
+		}
+	}
+}
+
+func (c *ConsumerMQ) ChooseTemlateNotification223(msqs <-chan amqp.Delivery, inf rabbit.InformationFile, m *mongo.MongoDb) {
+	collection := "xml_notification223"
+	for message := range msqs {
+		if err := json.Unmarshal(message.Body, &inf); err != nil {
+			log.Printf("Не могу прочитать - %v", err)
+		}
+		pattern := []string{
+			"Notice_",
+			"NoticeAE_",
+			"NoticeAE94_",
+			"NoticeAESMBO_",
+			"NoticeEP_",
+			"NoticeIS_",
+			"NoticeKESMBO_",
+			"NoticeOA_",
+			"NoticeOK_",
+			"NoticeZK_",
+			"NoticeZKESMBO_",
+			"NoticeZPESMBO_",
+		}
+
+		for _, k := range pattern {
+			matched, err := regexp.MatchString(k, inf.NameFile)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			// str := fmt.Sprintf("%v", value)
+			// fmt.Printf(str, " - ", k)
+			if matched {
+				switch typeNot := k; typeNot {
+				case "Notice_":
+					var not notifications223.PurchaseNotice
+					if err := xml.Unmarshal(inf.FileZip, &not); err != nil {
+						log.Println(err)
+					}
+					// fmt.Println(ea44.FcsNotificationEF.PurchaseNumber)
+					m.Save("readerXML", collection, &not)
+				case "NoticeAE_":
+					var notAE notifications223.PurchaseNoticeAE
+					xml.Unmarshal(inf.FileZip, &notAE)
+					// fmt.Println(ea615)
+					m.Save("readerXML", collection, &notAE)
+				case "NoticeAE94_":
+					var notAE94FZ notifications223.PurchaseNoticeAE94FZ
+					xml.Unmarshal(inf.FileZip, &notAE94FZ)
+					m.Save("readerXML", collection, &notAE94FZ)
+				case "NoticeAESMBO_":
+					var notAESMBO notifications223.PurchaseNoticeAESMBO
+					xml.Unmarshal(inf.FileZip, &notAESMBO)
+					// fmt.Println(ok504)
+					m.Save("readerXML", collection, &notAESMBO)
+				case "NoticeEP_":
+					var notEP notifications223.PurchaseNoticeEP
+					xml.Unmarshal(inf.FileZip, &notEP)
+					// fmt.Println(za44)
+					m.Save("readerXML", collection, &notEP)
+				case "NoticeIS_":
+					var notIS notifications223.PurchaseNoticeIS
+					xml.Unmarshal(inf.FileZip, &notIS)
+					// fmt.Println(zk504)
+					m.Save("readerXML", collection, &notIS)
+				case "NoticeKESMBO_":
+					var notKESMBO notifications223.PurchaseNoticeKESMBO
+					xml.Unmarshal(inf.FileZip, &notKESMBO)
+					// fmt.Println(zkk44)
+					m.Save("readerXML", collection, &notKESMBO)
+				case "NoticeOA_":
+					var notOA notifications223.PurchaseNoticeOA
+					xml.Unmarshal(inf.FileZip, &notOA)
+					// fmt.Println(zp504)
+					m.Save("readerXML", collection, &notOA)
+				case "NoticeOK_":
+					var notOK notifications223.PurchaseNoticeOK
+					xml.Unmarshal(inf.FileZip, &notOK)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &notOK)
+				case "NoticeZK_":
+					var notZK notifications223.PurchaseNoticeZK
+					xml.Unmarshal(inf.FileZip, &notZK)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &notZK)
+				case "NoticeZKESMBO_":
+					var notZKESMBO notifications223.PurchaseNoticeZKESMBO
+					xml.Unmarshal(inf.FileZip, &notZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &notZKESMBO)
+				case "NoticeZPESMBO_":
+					var notZPESMBO notifications223.PurchaseNoticeZPESMBO
+					xml.Unmarshal(inf.FileZip, &notZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &notZPESMBO)
 				default:
 					fmt.Println("Не могу определить тип извещения", typeNot)
 				}
