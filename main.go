@@ -23,19 +23,24 @@ func MainReader() {
 	toml.DecodeFile(configPath, &conf)
 
 	c := make(chan bool)
-	//go func() {
-	//	parser := services.NewNotification44()
-	//	services.Do(parser, conf)
-	//}()
-	//
-	//go func() {
-	//	proto44 := services.NewProtocol44()
-	//	services.Do(proto44, conf)
-	//}()
-	//
+	go func() {
+		parser := services.NewNotification44()
+		services.Do(parser, conf)
+	}()
+
+	go func() {
+		proto44 := services.NewProtocol44()
+		services.Do(proto44, conf)
+	}()
+
 	go func() {
 		not223 := services.NewNotifications223()
 		services.Do(not223, conf)
+	}()
+
+	go func() {
+		proto223 := services.NewProtocols223()
+		services.Do(proto223, conf)
 	}()
 	<-c
 }

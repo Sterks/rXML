@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:export xsi:schemaLocation="http://locahost:8080/schema/TFF- http://locahost:8080/schema/TFF-/Types.xsd" xmlns="http://zakupki.gov.ru/oos/types/1" xmlns:ns6="http://zakupki.gov.ru/oos/CPtypes/1" xmlns:ns5="http://zakupki.gov.ru/oos/TPtypes/1" xmlns:ns8="http://zakupki.gov.ru/oos/EPtypes/1" xmlns:ns7="http://zakupki.gov.ru/oos/pprf615types/1" xmlns:ns9="http://zakupki.gov.ru/oos/SMTypes/1" xmlns:ns11="http://zakupki.gov.ru/oos/control99/1" xmlns:ns10="http://zakupki.gov.ru/oos/printform/1" xmlns:ns2="http://zakupki.gov.ru/oos/export/1" xmlns:ns4="http://zakupki.gov.ru/oos/base/1" xmlns:ns3="http://zakupki.gov.ru/oos/common/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns2:epProtocolEOKOU2 schemeVersion="10.2">
+        <ns8:id>30317735</ns8:id>
+        <ns8:externalId>10959038</ns8:externalId>
+        <ns8:versionNumber>1</ns8:versionNumber>
+        <ns8:foundationDocInfo>
+            <ns8:foundationDocNumber>ПРОI1</ns8:foundationDocNumber>
+            <ns8:foundationDocNumberExternal>0373200025620000354-1-10930603</ns8:foundationDocNumberExternal>
+        </ns8:foundationDocInfo>
+        <ns8:commonInfo>
+            <ns8:purchaseNumber>0373200025620000354</ns8:purchaseNumber>
+            <ns8:docNumber>ПРОII1</ns8:docNumber>
+            <ns8:publishDTInEIS>2020-10-01T12:30:12+03:00</ns8:publishDTInEIS>
+            <ns8:href>https://etp.roseltorg.ru/common/protocol/printform/id/be38a700fa2f9b</ns8:href>
+            <ns8:docNumberExternal>0373200025620000354-2-10959038</ns8:docNumberExternal>
+            <ns8:publishDTInETP>2020-10-01T00:00:00+03:00</ns8:publishDTInETP>
+            <ns8:place>Место составления протокола</ns8:place>
+            <ns8:procedureDT>2020-10-01T00:00:00+03:00</ns8:procedureDT>
+            <ns8:signDT>2020-10-01+03:00</ns8:signDT>
+            <ns8:hrefExternal>https://etp.roseltorg.ru/common/protocol/printform/id/be38a700fa2f9b</ns8:hrefExternal>
+        </ns8:commonInfo>
+        <ns8:protocolPublisherInfo>
+            <ns8:publisherOrg>
+                <ns8:regNum>03732000256</ns8:regNum>
+                <ns8:consRegistryNum>452А2108</ns8:consRegistryNum>
+                <ns8:fullName>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ "ГОРОДСКАЯ КЛИНИЧЕСКАЯ БОЛЬНИЦА № 31 ДЕПАРТАМЕНТА ЗДРАВООХРАНЕНИЯ ГОРОДА МОСКВЫ"</ns8:fullName>
+                <ns8:postAddress>Российская Федерация, 119415, Москва, УЛ ЛОБАЧЕВСКОГО, ДОМ 42/КОРПУС 1.2.3.6</ns8:postAddress>
+                <ns8:factAddress>Российская Федерация, 119415, Москва, УЛИЦА ЛОБАЧЕВСКОГО, ДОМ 42/СТРОЕНИЕ 1.2.3.4.6</ns8:factAddress>
+                <ns8:INN>7729123204</ns8:INN>
+                <ns8:KPP>772901001</ns8:KPP>
+            </ns8:publisherOrg>
+            <ns8:publisherRole>CU</ns8:publisherRole>
+        </ns8:protocolPublisherInfo>
+        <ns8:commissionInfo>
+            <ns3:commissionName>Единая комиссия Государственного бюджетного учреждения здравоохранения города Москвы "Городская клиническая больница № 31 Департамента здравоохранения города Москвы" </ns3:commissionName>
+            <ns3:commissionMembers>
+                <ns3:commissionMember>
+                    <ns3:memberNumber>10259832</ns3:memberNumber>
+                    <ns3:nameInfo>
+                        <ns3:lastName>Чипинская</ns3:lastName>
+                        <ns3:firstName>Алла</ns3:firstName>
+                        <ns3:middleName>Викторовна</ns3:middleName>
+                    </ns3:nameInfo>
+                    <ns3:role>
+                        <ns3:code>5</ns3:code>
+                        <ns3:name>Секретарь</ns3:name>
+                        <ns3:rightVote>true</ns3:rightVote>
+                    </ns3:role>
+                </ns3:commissionMember>
+                <ns3:commissionMember>
+                    <ns3:memberNumber>10259834</ns3:memberNumber>
+                    <ns3:nameInfo>
+                        <ns3:lastName>Ефремова</ns3:lastName>
+                        <ns3:firstName>Наталья</ns3:firstName>
+                        <ns3:middleName>Михайловна</ns3:middleName>
+                    </ns3:nameInfo>
+                    <ns3:role>
+                        <ns3:code>4</ns3:code>
+                        <ns3:name>Член комиссии</ns3:name>
+                        <ns3:rightVote>true</ns3:rightVote>
+                    </ns3:role>
+                </ns3:commissionMember>
+                <ns3:commissionMember>
+                    <ns3:memberNumber>10854239</ns3:memberNumber>
+                    <ns3:nameInfo>
+                        <ns3:lastName>Бородачева</ns3:lastName>
+                        <ns3:firstName>Ирина</ns3:firstName>
+                        <ns3:middleName>Алексеевна</ns3:middleName>
+                    </ns3:nameInfo>
+                    <ns3:role>
+                        <ns3:code>4</ns3:code>
+                        <ns3:name>Член комиссии</ns3:name>
+                        <ns3:rightVote>true</ns3:rightVote>
+                    </ns3:role>
+                </ns3:commissionMember>
+                <ns3:commissionMember>
+                    <ns3:memberNumber>10259831</ns3:memberNumber>
+                    <ns3:nameInfo>
+                        <ns3:lastName>Урванова</ns3:lastName>
+                        <ns3:firstName>Ирина</ns3:firstName>
+                        <ns3:middleName>Анатольевна</ns3:middleName>
+                    </ns3:nameInfo>
+                    <ns3:role>
+                        <ns3:code>1</ns3:code>
+                        <ns3:name>Председатель комиссии</ns3:name>
+                        <ns3:rightVote>true</ns3:rightVote>
+                    </ns3:role>
+                </ns3:commissionMember>
+            </ns3:commissionMembers>
+        </ns8:commissionInfo>
+        <ns8:printFormInfo>
+            <ns3:url>https://zakupki.gov.ru/epz/order/notice/printForm/view.html?printFormId=121998335</ns3:url>
+            <ns3:signature type="CAdES-BES">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</ns3:signature>
+            <ns3:signature type="CAdES-BES">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</ns3:signature>
+        </ns8:printFormInfo>
+        <ns8:extPrintFormInfo>
+            <ns3:url>https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=7DC6925B595A424294483DE1F703A027</ns3:url>
+            <ns3:signature>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</ns3:signature>
+            <ns3:fileType>pdf</ns3:fileType>
+        </ns8:extPrintFormInfo>
+        <ns8:afterProlongation>false</ns8:afterProlongation>
+        <ns8:protocolInfo>
+            <ns8:applicationsInfo>
+                <ns8:applicationInfo>
+                    <ns8:commonInfo>
+                        <ns8:appNumber>2</ns8:appNumber>
+                        <ns8:appDT>2020-09-11T10:32:30+03:00</ns8:appDT>
+                        <ns8:admissionResultsInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259831</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Урванова</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Анатольевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>1</ns3:code>
+                                        <ns3:name>Председатель комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259832</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Чипинская</ns3:lastName>
+                                        <ns3:firstName>Алла</ns3:firstName>
+                                        <ns3:middleName>Викторовна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>5</ns3:code>
+                                        <ns3:name>Секретарь</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10854239</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Бородачева</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Алексеевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259834</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Ефремова</ns3:lastName>
+                                        <ns3:firstName>Наталья</ns3:firstName>
+                                        <ns3:middleName>Михайловна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                        </ns8:admissionResultsInfo>
+                    </ns8:commonInfo>
+                    <ns8:appParticipantInfo>
+                        <ns3:legalEntityRFInfo>
+                            <ns3:fullName>ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО " ХЛЕБОЗАВОД № 24"</ns3:fullName>
+                            <ns3:INN>7712022825</ns3:INN>
+                            <ns3:KPP>774301001</ns3:KPP>
+                            <ns3:legalForm>
+                                <ns4:code>12247</ns4:code>
+                                <ns4:singularName>Публичные акционерные общества</ns4:singularName>
+                            </ns3:legalForm>
+                            <ns3:contactInfo>
+                                <ns3:orgPostAddress> </ns3:orgPostAddress>
+                                <ns3:orgFactAddress>125080, Российская Федерация,  Г МОСКВА,  ПРОЕЗД СВЕТЛЫЙ,  2,  </ns3:orgFactAddress>
+                                <ns3:contactPersonInfo>
+                                    <ns3:lastName>Косяк</ns3:lastName>
+                                    <ns3:firstName>Дмитрий</ns3:firstName>
+                                    <ns3:middleName>Сергеевич</ns3:middleName>
+                                </ns3:contactPersonInfo>
+                                <ns3:contactEMail>market@hlebozavod28.ru</ns3:contactEMail>
+                                <ns3:contactPhone>79032196045</ns3:contactPhone>
+                            </ns3:contactInfo>
+                        </ns3:legalEntityRFInfo>
+                    </ns8:appParticipantInfo>
+                    <ns8:documentRequirementsInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244947</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>1</ns8:number>
+                            <ns8:name>Согласие участника  конкурса с ограниченным участием в электронной форме на поставку товара, выполнение работы или оказание услуги на условиях, предусмотренных конкурсной документацией и не подлежащих изменению по результатам проведения  конкурса с ограниченным участием в электронной форме</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244948</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>2</ns8:number>
+                            <ns8:name>Наименование, фирменное наименование (при наличии), место нахождения (для юридического лица), фамилию, имя, отчество (при наличии), паспортные данные, место жительства (для физического лица), почтовый адрес участника  конкурса с ограниченным участием в электронной форме, номер контактного телефона, идентификационный номер налогоплательщика участника такого конкурса или в соответствии с законодательством соответствующего иностранного государства аналог идентификационного номера налогоплательщика участника такого конкурса (для иностранного лица), идентификационный номер налогоплательщика (при наличии) учредителей, членов коллегиального исполнительного органа, лица, исполняющего функции единоличного исполнительного органа участника такого конкурса</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244949</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>3</ns8:number>
+                            <ns8:name>Декларация о соответствии участника  конкурса с ограниченным участием в электронной форме требованиям, установленным в соответствии с пунктами 3 - 9, 11 ч. 1 ст. 31 Закона о контрактной системе (указанная декларация предоставляется с использованием программно-аппаратных средств электронной площадки)</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244950</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>4</ns8:number>
+                            <ns8:name>Документы, подтверждающие право участника  конкурса с ограниченным участием в электронной форме на получение преимуществ в соответствии со статьями 28 и 29 Закона о контрактной системе, в случае, если участник  конкурса с ограниченным участием в электронной форме заявил о получении указанных преимуществ, или копии этих документов:</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244951</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>5</ns8:number>
+                            <ns8:name>Документы, подтверждающие квалификацию участника  конкурса с ограниченным участием в электронной форме. 
+При этом отсутствие этих документов не является основанием для признания заявки на участие в  конкурсе с ограниченным участием в электронной форме не соответствующей требованиям документации о таком конкурсе</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244952</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>6</ns8:number>
+                            <ns8:name>Копия ранее исполненного контракта (договора), сведения о котором содержатся в реестре контрактов, заключенных в соответствии с Федеральным законом "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд", либо в реестре договоров, заключенных по результатам закупок в соответствии с Федеральным законом "О закупках товаров, работ, услуг отдельными видами юридических лиц", и копия (копии) документа (документов) о приемке поставленного товара, оказанной услуги</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                    </ns8:documentRequirementsInfo>
+                    <ns8:admittedInfo>
+                        <ns8:appAdmittedInfo>
+                            <ns8:admitted>true</ns8:admitted>
+                        </ns8:appAdmittedInfo>
+                    </ns8:admittedInfo>
+                </ns8:applicationInfo>
+                <ns8:applicationInfo>
+                    <ns8:commonInfo>
+                        <ns8:appNumber>3</ns8:appNumber>
+                        <ns8:appDT>2020-09-22T14:31:19+03:00</ns8:appDT>
+                        <ns8:admissionResultsInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259831</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Урванова</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Анатольевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>1</ns3:code>
+                                        <ns3:name>Председатель комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259832</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Чипинская</ns3:lastName>
+                                        <ns3:firstName>Алла</ns3:firstName>
+                                        <ns3:middleName>Викторовна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>5</ns3:code>
+                                        <ns3:name>Секретарь</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10854239</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Бородачева</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Алексеевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259834</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Ефремова</ns3:lastName>
+                                        <ns3:firstName>Наталья</ns3:firstName>
+                                        <ns3:middleName>Михайловна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                        </ns8:admissionResultsInfo>
+                    </ns8:commonInfo>
+                    <ns8:appParticipantInfo>
+                        <ns3:legalEntityRFInfo>
+                            <ns3:fullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МУКОМОЛЬНАЯ ХЛЕБНАЯ КОМПАНИЯ"</ns3:fullName>
+                            <ns3:INN>7720731800</ns3:INN>
+                            <ns3:KPP>772201001</ns3:KPP>
+                            <ns3:legalForm>
+                                <ns4:code>12247</ns4:code>
+                                <ns4:singularName>Публичные акционерные общества</ns4:singularName>
+                            </ns3:legalForm>
+                            <ns3:contactInfo>
+                                <ns3:orgPostAddress>109052, г. Москва, ул. Подъемная, д.14, стр.34, ком.14</ns3:orgPostAddress>
+                                <ns3:orgFactAddress>109052, Российская Федерация,  Г МОСКВА,  УЛ ПОДЪЁМНАЯ,  ДОМ 14,  СТРОЕНИЕ 34 КОМНАТЫ 1415</ns3:orgFactAddress>
+                                <ns3:contactPersonInfo>
+                                    <ns3:lastName>Кокорева</ns3:lastName>
+                                    <ns3:firstName>Нина</ns3:firstName>
+                                    <ns3:middleName>Александровна</ns3:middleName>
+                                </ns3:contactPersonInfo>
+                                <ns3:contactEMail>mxkhleb@bk.ru</ns3:contactEMail>
+                                <ns3:contactPhone>74956493098</ns3:contactPhone>
+                            </ns3:contactInfo>
+                        </ns3:legalEntityRFInfo>
+                    </ns8:appParticipantInfo>
+                    <ns8:documentRequirementsInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244947</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>1</ns8:number>
+                            <ns8:name>Согласие участника  конкурса с ограниченным участием в электронной форме на поставку товара, выполнение работы или оказание услуги на условиях, предусмотренных конкурсной документацией и не подлежащих изменению по результатам проведения  конкурса с ограниченным участием в электронной форме</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244948</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>2</ns8:number>
+                            <ns8:name>Наименование, фирменное наименование (при наличии), место нахождения (для юридического лица), фамилию, имя, отчество (при наличии), паспортные данные, место жительства (для физического лица), почтовый адрес участника  конкурса с ограниченным участием в электронной форме, номер контактного телефона, идентификационный номер налогоплательщика участника такого конкурса или в соответствии с законодательством соответствующего иностранного государства аналог идентификационного номера налогоплательщика участника такого конкурса (для иностранного лица), идентификационный номер налогоплательщика (при наличии) учредителей, членов коллегиального исполнительного органа, лица, исполняющего функции единоличного исполнительного органа участника такого конкурса</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244949</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>3</ns8:number>
+                            <ns8:name>Декларация о соответствии участника  конкурса с ограниченным участием в электронной форме требованиям, установленным в соответствии с пунктами 3 - 9, 11 ч. 1 ст. 31 Закона о контрактной системе (указанная декларация предоставляется с использованием программно-аппаратных средств электронной площадки)</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244950</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>4</ns8:number>
+                            <ns8:name>Документы, подтверждающие право участника  конкурса с ограниченным участием в электронной форме на получение преимуществ в соответствии со статьями 28 и 29 Закона о контрактной системе, в случае, если участник  конкурса с ограниченным участием в электронной форме заявил о получении указанных преимуществ, или копии этих документов:</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244951</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>5</ns8:number>
+                            <ns8:name>Документы, подтверждающие квалификацию участника  конкурса с ограниченным участием в электронной форме. 
+При этом отсутствие этих документов не является основанием для признания заявки на участие в  конкурсе с ограниченным участием в электронной форме не соответствующей требованиям документации о таком конкурсе</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244952</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>6</ns8:number>
+                            <ns8:name>Копия ранее исполненного контракта (договора), сведения о котором содержатся в реестре контрактов, заключенных в соответствии с Федеральным законом "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд", либо в реестре договоров, заключенных по результатам закупок в соответствии с Федеральным законом "О закупках товаров, работ, услуг отдельными видами юридических лиц", и копия (копии) документа (документов) о приемке поставленного товара, оказанной услуги</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                    </ns8:documentRequirementsInfo>
+                    <ns8:admittedInfo>
+                        <ns8:appAdmittedInfo>
+                            <ns8:admitted>true</ns8:admitted>
+                        </ns8:appAdmittedInfo>
+                    </ns8:admittedInfo>
+                </ns8:applicationInfo>
+                <ns8:applicationInfo>
+                    <ns8:commonInfo>
+                        <ns8:appNumber>5</ns8:appNumber>
+                        <ns8:appDT>2020-09-22T19:16:55+03:00</ns8:appDT>
+                        <ns8:admissionResultsInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259831</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Урванова</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Анатольевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>1</ns3:code>
+                                        <ns3:name>Председатель комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259832</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Чипинская</ns3:lastName>
+                                        <ns3:firstName>Алла</ns3:firstName>
+                                        <ns3:middleName>Викторовна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>5</ns3:code>
+                                        <ns3:name>Секретарь</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10854239</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Бородачева</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Алексеевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259834</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Ефремова</ns3:lastName>
+                                        <ns3:firstName>Наталья</ns3:firstName>
+                                        <ns3:middleName>Михайловна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>true</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                        </ns8:admissionResultsInfo>
+                    </ns8:commonInfo>
+                    <ns8:appParticipantInfo>
+                        <ns3:legalEntityRFInfo>
+                            <ns3:fullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "ЯРОСЛАВИЧ"</ns3:fullName>
+                            <ns3:INN>7604042447</ns3:INN>
+                            <ns3:KPP>760401001</ns3:KPP>
+                            <ns3:legalForm>
+                                <ns4:code>12247</ns4:code>
+                                <ns4:singularName>Публичные акционерные общества</ns4:singularName>
+                            </ns3:legalForm>
+                            <ns3:contactInfo>
+                                <ns3:orgPostAddress>150014, ОБЛ ЯРОСЛАВСКАЯ, Г ЯРОСЛАВЛЬ, УЛ РЫБИНСКАЯ, 45/38</ns3:orgPostAddress>
+                                <ns3:orgFactAddress>150014, Российская Федерация,  ОБЛ ЯРОСЛАВСКАЯ,  Г ЯРОСЛАВЛЬ,  УЛ РЫБИНСКАЯ,  45/38</ns3:orgFactAddress>
+                                <ns3:contactPersonInfo>
+                                    <ns3:lastName>Крылов</ns3:lastName>
+                                    <ns3:firstName>Игорь</ns3:firstName>
+                                    <ns3:middleName>Анатольевич</ns3:middleName>
+                                </ns3:contactPersonInfo>
+                                <ns3:contactEMail>pk-yar76@yandex.ru</ns3:contactEMail>
+                                <ns3:contactPhone>74852230766</ns3:contactPhone>
+                            </ns3:contactInfo>
+                        </ns3:legalEntityRFInfo>
+                    </ns8:appParticipantInfo>
+                    <ns8:documentRequirementsInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244947</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>1</ns8:number>
+                            <ns8:name>Согласие участника  конкурса с ограниченным участием в электронной форме на поставку товара, выполнение работы или оказание услуги на условиях, предусмотренных конкурсной документацией и не подлежащих изменению по результатам проведения  конкурса с ограниченным участием в электронной форме</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244948</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>2</ns8:number>
+                            <ns8:name>Наименование, фирменное наименование (при наличии), место нахождения (для юридического лица), фамилию, имя, отчество (при наличии), паспортные данные, место жительства (для физического лица), почтовый адрес участника  конкурса с ограниченным участием в электронной форме, номер контактного телефона, идентификационный номер налогоплательщика участника такого конкурса или в соответствии с законодательством соответствующего иностранного государства аналог идентификационного номера налогоплательщика участника такого конкурса (для иностранного лица), идентификационный номер налогоплательщика (при наличии) учредителей, членов коллегиального исполнительного органа, лица, исполняющего функции единоличного исполнительного органа участника такого конкурса</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244949</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>3</ns8:number>
+                            <ns8:name>Декларация о соответствии участника  конкурса с ограниченным участием в электронной форме требованиям, установленным в соответствии с пунктами 3 - 9, 11 ч. 1 ст. 31 Закона о контрактной системе (указанная декларация предоставляется с использованием программно-аппаратных средств электронной площадки)</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244950</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>4</ns8:number>
+                            <ns8:name>Документы, подтверждающие право участника  конкурса с ограниченным участием в электронной форме на получение преимуществ в соответствии со статьями 28 и 29 Закона о контрактной системе, в случае, если участник  конкурса с ограниченным участием в электронной форме заявил о получении указанных преимуществ, или копии этих документов:</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244951</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>5</ns8:number>
+                            <ns8:name>Документы, подтверждающие квалификацию участника  конкурса с ограниченным участием в электронной форме. 
+При этом отсутствие этих документов не является основанием для признания заявки на участие в  конкурсе с ограниченным участием в электронной форме не соответствующей требованиям документации о таком конкурсе</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>false</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244952</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>6</ns8:number>
+                            <ns8:name>Копия ранее исполненного контракта (договора), сведения о котором содержатся в реестре контрактов, заключенных в соответствии с Федеральным законом "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд", либо в реестре договоров, заключенных по результатам закупок в соответствии с Федеральным законом "О закупках товаров, работ, услуг отдельными видами юридических лиц", и копия (копии) документа (документов) о приемке поставленного товара, оказанной услуги</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                    </ns8:documentRequirementsInfo>
+                    <ns8:correspondenciesInfo>
+                        <ns8:correspondenceInfo>
+                            <ns8:compatible>true</ns8:compatible>
+                            <ns8:preferenseInfo>
+                                <ns3:preferenseRequirementInfo>
+                                    <ns4:shortName>IN44</ns4:shortName>
+                                    <ns4:name>Организациям инвалидов (в соответствии со статьей 29 Федерального закона № 44-ФЗ)</ns4:name>
+                                </ns3:preferenseRequirementInfo>
+                                <ns3:prefValue>15.0</ns3:prefValue>
+                            </ns8:preferenseInfo>
+                        </ns8:correspondenceInfo>
+                    </ns8:correspondenciesInfo>
+                    <ns8:admittedInfo>
+                        <ns8:appAdmittedInfo>
+                            <ns8:admitted>true</ns8:admitted>
+                        </ns8:appAdmittedInfo>
+                    </ns8:admittedInfo>
+                </ns8:applicationInfo>
+                <ns8:applicationInfo>
+                    <ns8:commonInfo>
+                        <ns8:appNumber>4</ns8:appNumber>
+                        <ns8:appDT>2020-09-22T17:46:30+03:00</ns8:appDT>
+                        <ns8:admissionResultsInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259831</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Урванова</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Анатольевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>1</ns3:code>
+                                        <ns3:name>Председатель комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>false</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259832</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Чипинская</ns3:lastName>
+                                        <ns3:firstName>Алла</ns3:firstName>
+                                        <ns3:middleName>Викторовна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>5</ns3:code>
+                                        <ns3:name>Секретарь</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>false</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10854239</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Бородачева</ns3:lastName>
+                                        <ns3:firstName>Ирина</ns3:firstName>
+                                        <ns3:middleName>Алексеевна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>false</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                            <ns8:admissionResultInfo>
+                                <ns8:commissionMemberInfo>
+                                    <ns3:memberNumber>10259834</ns3:memberNumber>
+                                    <ns3:nameInfo>
+                                        <ns3:lastName>Ефремова</ns3:lastName>
+                                        <ns3:firstName>Наталья</ns3:firstName>
+                                        <ns3:middleName>Михайловна</ns3:middleName>
+                                    </ns3:nameInfo>
+                                    <ns3:role>
+                                        <ns3:code>4</ns3:code>
+                                        <ns3:name>Член комиссии</ns3:name>
+                                        <ns3:rightVote>true</ns3:rightVote>
+                                    </ns3:role>
+                                </ns8:commissionMemberInfo>
+                                <ns8:admitted>false</ns8:admitted>
+                            </ns8:admissionResultInfo>
+                        </ns8:admissionResultsInfo>
+                    </ns8:commonInfo>
+                    <ns8:appParticipantInfo>
+                        <ns3:legalEntityRFInfo>
+                            <ns3:fullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТОРГОВЫЙ ДОМ "КОЛОМЕНСКИЙ"</ns3:fullName>
+                            <ns3:INN>9721071156</ns3:INN>
+                            <ns3:KPP>772401001</ns3:KPP>
+                            <ns3:legalForm>
+                                <ns4:code>12247</ns4:code>
+                                <ns4:singularName>Публичные акционерные общества</ns4:singularName>
+                            </ns3:legalForm>
+                            <ns3:contactInfo>
+                                <ns3:orgPostAddress>115230, Г МОСКВА, ПРОЕЗД ХЛЕБОЗАВОДСКИЙ, ДОМ 7, СТРОЕНИЕ 10, ЭТАЖ 2 ПОМ 201</ns3:orgPostAddress>
+                                <ns3:orgFactAddress>115230, Российская Федерация,  Г МОСКВА,  ПРОЕЗД ХЛЕБОЗАВОДСКИЙ,  ДОМ 7,  СТРОЕНИЕ 10, ЭТАЖ 2 ПОМ 201</ns3:orgFactAddress>
+                                <ns3:contactPersonInfo>
+                                    <ns3:lastName>Голубов</ns3:lastName>
+                                    <ns3:firstName>Олег</ns3:firstName>
+                                    <ns3:middleName>Александрович</ns3:middleName>
+                                </ns3:contactPersonInfo>
+                                <ns3:contactEMail>tdkolomensky@yandex.ru</ns3:contactEMail>
+                                <ns3:contactPhone>79854451374</ns3:contactPhone>
+                            </ns3:contactInfo>
+                        </ns3:legalEntityRFInfo>
+                    </ns8:appParticipantInfo>
+                    <ns8:documentRequirementsInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244947</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>1</ns8:number>
+                            <ns8:name>Согласие участника  конкурса с ограниченным участием в электронной форме на поставку товара, выполнение работы или оказание услуги на условиях, предусмотренных конкурсной документацией и не подлежащих изменению по результатам проведения  конкурса с ограниченным участием в электронной форме</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244948</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>2</ns8:number>
+                            <ns8:name>Наименование, фирменное наименование (при наличии), место нахождения (для юридического лица), фамилию, имя, отчество (при наличии), паспортные данные, место жительства (для физического лица), почтовый адрес участника  конкурса с ограниченным участием в электронной форме, номер контактного телефона, идентификационный номер налогоплательщика участника такого конкурса или в соответствии с законодательством соответствующего иностранного государства аналог идентификационного номера налогоплательщика участника такого конкурса (для иностранного лица), идентификационный номер налогоплательщика (при наличии) учредителей, членов коллегиального исполнительного органа, лица, исполняющего функции единоличного исполнительного органа участника такого конкурса</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244949</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>3</ns8:number>
+                            <ns8:name>Декларация о соответствии участника  конкурса с ограниченным участием в электронной форме требованиям, установленным в соответствии с пунктами 3 - 9, 11 ч. 1 ст. 31 Закона о контрактной системе (указанная декларация предоставляется с использованием программно-аппаратных средств электронной площадки)</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244950</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>4</ns8:number>
+                            <ns8:name>Документы, подтверждающие право участника  конкурса с ограниченным участием в электронной форме на получение преимуществ в соответствии со статьями 28 и 29 Закона о контрактной системе, в случае, если участник  конкурса с ограниченным участием в электронной форме заявил о получении указанных преимуществ, или копии этих документов:</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>true</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244951</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>5</ns8:number>
+                            <ns8:name>Документы, подтверждающие квалификацию участника  конкурса с ограниченным участием в электронной форме. 
+При этом отсутствие этих документов не является основанием для признания заявки на участие в  конкурсе с ограниченным участием в электронной форме не соответствующей требованиям документации о таком конкурсе</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>false</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                        <ns8:documentRequirementInfo>
+                            <ns8:sId>7244952</ns8:sId>
+                            <ns8:externalSId>null</ns8:externalSId>
+                            <ns8:number>6</ns8:number>
+                            <ns8:name>Копия ранее исполненного контракта (договора), сведения о котором содержатся в реестре контрактов, заключенных в соответствии с Федеральным законом "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд", либо в реестре договоров, заключенных по результатам закупок в соответствии с Федеральным законом "О закупках товаров, работ, услуг отдельными видами юридических лиц", и копия (копии) документа (документов) о приемке поставленного товара, оказанной услуги</ns8:name>
+                            <ns8:mandatory>true</ns8:mandatory>
+                            <ns8:presenceInApp>false</ns8:presenceInApp>
+                        </ns8:documentRequirementInfo>
+                    </ns8:documentRequirementsInfo>
+                    <ns8:admittedInfo>
+                        <ns8:appNotAdmittedInfo>
+                            <ns8:appRejectedReasonsInfo>
+                                <ns8:appRejectedReasonInfo>
+                                    <ns3:rejectReason>
+                                        <ns4:code>DNFV</ns4:code>
+                                        <ns4:name>Документы заявки представлены не в полном объеме или предоставлена недостоверная информация</ns4:name>
+                                    </ns3:rejectReason>
+                                    <ns3:explanation>ч. 8 ст. 56.1 44-ФЗ - несоответствие заявки требованиям, конкурсной документации, в случаях, предусмотренных ч. 4 ст. 54.7 44-ФЗ, а также в случае несоответствия участника требованиям, конкурсной документацией в соответствии с ч. 2 ст.31 44-ФЗ.</ns3:explanation>
+                                </ns8:appRejectedReasonInfo>
+                            </ns8:appRejectedReasonsInfo>
+                        </ns8:appNotAdmittedInfo>
+                    </ns8:admittedInfo>
+                </ns8:applicationInfo>
+            </ns8:applicationsInfo>
+            <ns8:research>false</ns8:research>
+        </ns8:protocolInfo>
+    </ns2:epProtocolEOKOU2>
+</ns2:export>

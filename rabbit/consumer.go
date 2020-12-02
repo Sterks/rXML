@@ -4,7 +4,9 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
+	"github.com/Sterks/rXML/models"
 	"github.com/Sterks/rXML/notifications223"
+	"github.com/Sterks/rXML/protocols223"
 	"github.com/Sterks/rXML/protocols44"
 	"log"
 	"os"
@@ -49,6 +51,8 @@ func (c *ConsumerMQ) ConsumerMQNow(config *config.Config, nameQueue string) <-ch
 			c.ChooseTemlateProtocol44(msqs, inf, m)
 		} else if nameQueue == "Notifications223OpenFile" {
 			c.ChooseTemlateNotification223(msqs, inf, m)
+		} else if nameQueue == "Protocols223OpenFile" {
+			c.ChooseTemlateProtocols223(msqs, inf, m)
 		}
 	}()
 	<-stopChan
@@ -57,6 +61,7 @@ func (c *ConsumerMQ) ConsumerMQNow(config *config.Config, nameQueue string) <-ch
 }
 
 func (c *ConsumerMQ) ChooseTemlateNotification44(msqs <-chan amqp.Delivery, inf rabbit.InformationFile, m *mongo.MongoDb) {
+	collection := "xml_notification44"
 	for message := range msqs {
 		if err := json.Unmarshal(message.Body, &inf); err != nil {
 			log.Printf("Не могу прочитать - %v", err)
@@ -88,46 +93,46 @@ func (c *ConsumerMQ) ChooseTemlateNotification44(msqs <-chan amqp.Delivery, inf 
 						log.Println(err)
 					}
 					// fmt.Println(ea44.FcsNotificationEF.PurchaseNumber)
-					m.Save("readerXML", "xml_notification", &ea44)
+					m.Save("readerXML", collection, &ea44)
 				case ".EA615_":
 					var ea615 structs.NotificationEA615
 					xml.Unmarshal(inf.FileZip, &ea615)
 					// fmt.Println(ea615)
-					m.Save("readerXML", "xml_notification", &ea615)
+					m.Save("readerXML", collection, &ea615)
 				case ".INM111_":
 					var inm111 structs.NotificationNM111
 					xml.Unmarshal(inf.FileZip, &inm111)
-					m.Save("readerXML", "xml_notification", &inm111)
+					m.Save("readerXML", collection, &inm111)
 				case ".OK504_":
 					var ok504 structs.NotificationOK504
 					xml.Unmarshal(inf.FileZip, &ok504)
 					// fmt.Println(ok504)
-					m.Save("readerXML", "xml_notification", &ok504)
+					m.Save("readerXML", collection, &ok504)
 				case ".ZA44_":
 					var za44 structs.NotificationZA44
 					xml.Unmarshal(inf.FileZip, &za44)
 					// fmt.Println(za44)
-					m.Save("readerXML", "xml_notification", &za44)
+					m.Save("readerXML", collection, &za44)
 				case ".ZK504_":
 					var zk504 structs.NotificationZK504
 					xml.Unmarshal(inf.FileZip, &zk504)
 					// fmt.Println(zk504)
-					m.Save("readerXML", "xml_notification", &zk504)
+					m.Save("readerXML", collection, &zk504)
 				case ".ZKK44_":
 					var zkk44 structs.NotificationZKKP44
 					xml.Unmarshal(inf.FileZip, &zkk44)
 					// fmt.Println(zkk44)
-					m.Save("readerXML", "xml_notification", &zkk44)
+					m.Save("readerXML", collection, &zkk44)
 				case ".ZP504_":
 					var zp504 structs.NotificationZP504
 					xml.Unmarshal(inf.FileZip, &zp504)
 					// fmt.Println(zp504)
-					m.Save("readerXML", "xml_notification", &zp504)
+					m.Save("readerXML", collection, &zp504)
 				case ".OKU504_":
 					var oku504 structs.NotificationOKU504
 					xml.Unmarshal(inf.FileZip, &oku504)
 					// fmt.Println(oku504)
-					m.Save("readerXML", "xml_notification", &oku504)
+					m.Save("readerXML", collection, &oku504)
 				default:
 					fmt.Println("Не могу определить тип извещения", typeNot)
 				}
@@ -248,6 +253,265 @@ func (c *ConsumerMQ) ChooseTemlateNotification223(msqs <-chan amqp.Delivery, inf
 	}
 }
 
+func (c *ConsumerMQ) ChooseTemlateProtocols223(msqs <-chan amqp.Delivery, inf rabbit.InformationFile, m *mongo.MongoDb) {
+	collection := "xml_protocols223"
+	for message := range msqs {
+		if err := json.Unmarshal(message.Body, &inf); err != nil {
+			log.Printf("Не могу прочитать - %v", err)
+		}
+		pattern := []string{
+			"Protocol_",
+			"ProtocolCancellation_",
+			"ProtocolCCAESMBO_",
+			"ProtocolCCKESMBO_",
+			"ProtocolCCZKESMBO_",
+			"ProtocolCCZPESMBO_",
+			"ProtocolCollationAESMBO_",
+			"ProtocolEvasionAESMBO_",
+			"ProtocolEvasionKESMBO_",
+			"ProtocolEvasionZKESMBO_",
+			"ProtocolEvasionZPESMBO_",
+			"ProtocolFCDKESMBO_",
+			"ProtocolIP_",
+			"ProtocolOSZ_",
+			"ProtocolPA_AE_",
+			"ProtocolPA_OA_",
+			"ProtocolPAAE_",
+			"ProtocolPAAE94_",
+			"ProtocolPAEP_",
+			"ProtocolPAOA_",
+			"ProtocolRZ1AE_",
+			"ProtocolRZ1AESMBO_",
+			"ProtocolRZ1KESMBO_",
+			"ProtocolRZ1ZPESMBO_",
+			"ProtocolRZ2AE_",
+			"ProtocolRZ2AESMBO_",
+			"ProtocolRZ2KESMBO_",
+			"ProtocolRZ2ZPESMBO_",
+			"ProtocolRZAE_",
+			"ProtocolRZOA_",
+			"ProtocolRZOK_",
+			"ProtocolRZZKESMBO_",
+			"ProtocolSummingupAESMBO_",
+			"ProtocolSummingupKESMBO_",
+			"ProtocolSummingupZKESMBO_",
+			"ProtocolSummingupZPESMBO_",
+			"ProtocolVK_Moskva_",
+			"ProtocolZK_Moskva_",
+			"ProtocolZRPZAESMBO_",
+			"ProtocolZRPZZKESMBO_",
+			"ProtocolZRPZZPESMBO_",
+		}
+
+		for _, k := range pattern {
+			matched, err := regexp.MatchString(k, inf.NameFile)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			// str := fmt.Sprintf("%v", value)
+			// fmt.Printf(str, " - ", k)
+			if matched {
+				switch typeNot := k; typeNot {
+				case "Protocol_":
+					var proto223 protocols223.PurchaseProtocol
+					if err := xml.Unmarshal(inf.FileZip, &proto223); err != nil {
+						log.Println(err)
+					}
+					m.Save("readerXML", collection, &proto223)
+				case "ProtocolCancellation_":
+					var protoCancel protocols223.ProtocolCancellation
+					xml.Unmarshal(inf.FileZip, &protoCancel)
+					// fmt.Println(ea615)
+					m.Save("readerXML", collection, &protoCancel)
+				case "ProtocolCCAESMBO_":
+					var protoCCAESMBO protocols223.PurchaseProtocolCCAESMBO
+					xml.Unmarshal(inf.FileZip, &protoCCAESMBO)
+					m.Save("readerXML", collection, &protoCCAESMBO)
+				case "ProtocolCCKESMBO_":
+					var protoCCKESMBO protocols223.PurchaseProtocolCCKESMBO
+					xml.Unmarshal(inf.FileZip, &protoCCKESMBO)
+					// fmt.Println(ok504)
+					m.Save("readerXML", collection, &protoCCKESMBO)
+				case "ProtocolCCZKESMBO_":
+					var protoCCZKESMBO protocols223.PurchaseProtocolCCZKESMBO
+					xml.Unmarshal(inf.FileZip, &protoCCZKESMBO)
+					// fmt.Println(za44)
+					m.Save("readerXML", collection, &protoCCZKESMBO)
+				case "ProtocolCCZPESMBO_":
+					var protoCCZPESMBO protocols223.PurchaseProtocolCCZPESMBO
+					xml.Unmarshal(inf.FileZip, &protoCCZPESMBO)
+					// fmt.Println(zk504)
+					m.Save("readerXML", collection, &protoCCZPESMBO)
+				case "ProtocolCollationAESMBO_":
+					var protoCollation protocols223.PurchaseProtocolCollationAESMBO
+					xml.Unmarshal(inf.FileZip, &protoCollation)
+					// fmt.Println(zkk44)
+					m.Save("readerXML", collection, &protoCollation)
+				case "ProtocolEvasionAESMBO_":
+					var protoEvasionAESMBO protocols223.PurchaseProtocolEvasionAESMBO
+					xml.Unmarshal(inf.FileZip, &protoEvasionAESMBO)
+					// fmt.Println(zp504)
+					m.Save("readerXML", collection, &protoEvasionAESMBO)
+				case "ProtocolEvasionKESMBO_":
+					var protoEvasionKESMBO protocols223.PurchaseProtocolEvasionKESMBO
+					xml.Unmarshal(inf.FileZip, &protoEvasionKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protoEvasionKESMBO)
+				case "ProtocolEvasionZKESMBO_":
+					var protoEvasionZKESMBO protocols223.PurchaseProtocolEvasionZKESMBO
+					xml.Unmarshal(inf.FileZip, &protoEvasionZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protoEvasionZKESMBO)
+				case "ProtocolEvasionZPESMBO_":
+					var protocolEvasionZPESMBO protocols223.PurchaseProtocolEvasionZPESMBO
+					xml.Unmarshal(inf.FileZip, &protocolEvasionZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolEvasionZPESMBO)
+				case "ProtocolOSZ_":
+					var protocolOSZ protocols223.PurchaseProtocolOSZ
+					xml.Unmarshal(inf.FileZip, &protocolOSZ)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolOSZ)
+				case "ProtocolPA_AE_":
+					var protocolPAAE protocols223.PurchaseProtocolPAAE
+					xml.Unmarshal(inf.FileZip, &protocolPAAE)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolPAAE)
+				case "ProtocolPAAE94_":
+					var protocolPAAE94 protocols223.PurchaseProtocolPAAE94FZ
+					xml.Unmarshal(inf.FileZip, &protocolPAAE94)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolPAAE94)
+				case "ProtocolPAOA_":
+					var protocolPAOA protocols223.PurchaseProtocolPAEP
+					xml.Unmarshal(inf.FileZip, &protocolPAOA)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolPAOA)
+				case "ProtocolRZ1AE_":
+					var protocolRZ1AE protocols223.PurchaseProtocolRZ1AE94FZ
+					xml.Unmarshal(inf.FileZip, &protocolRZ1AE)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ1AE)
+				case "ProtocolRZ1AESMBO_":
+					var protocolRZ1AESMBO protocols223.PurchaseProtocolRZ2AESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ1AESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ1AESMBO)
+				case "ProtocolRZ1KESMBO_":
+					var protocolRZ1KESMBO protocols223.PurchaseProtocolRZ1KESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ1KESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ1KESMBO)
+				case "ProtocolRZ1ZPESMBO_":
+					var protocolRZ1ZPESMBO protocols223.PurchaseProtocolRZ1ZPESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ1ZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ1ZPESMBO)
+				case "ProtocolRZ2AE_":
+					var protocolRZ2AE protocols223.PurchaseProtocolRZ2AE94FZ
+					xml.Unmarshal(inf.FileZip, &protocolRZ2AE)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ2AE)
+				case "ProtocolRZ2AESMBO_":
+					var protocolRZ2AESMBO protocols223.PurchaseProtocolRZ2AESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ2AESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ2AESMBO)
+				case "ProtocolRZ2KESMBO_":
+					var protocolRZ2KESMBO protocols223.PurchaseProtocolRZ2KESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ2KESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ2KESMBO)
+				case "ProtocolRZ2ZPESMBO_":
+					var protocolRZ2ZPESMBO protocols223.PurchaseProtocolRZ2ZPESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZ2ZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZ2ZPESMBO)
+				case "ProtocolRZAE_":
+					var protocolRZAE protocols223.PurchaseProtocolRZAE
+					xml.Unmarshal(inf.FileZip, &protocolRZAE)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZAE)
+				case "ProtocolRZOA_":
+					var protocolRZOA protocols223.PurchaseProtocolRZOA
+					xml.Unmarshal(inf.FileZip, &protocolRZOA)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZOA)
+				case "ProtocolRZOK_":
+					var protocolRZOK protocols223.PurchaseProtocolRZOK
+					xml.Unmarshal(inf.FileZip, &protocolRZOK)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZOK)
+				case "ProtocolRZZKESMBO_":
+					var protocolRZZKESMBO protocols223.PurchaseProtocolRZZKESMBO
+					xml.Unmarshal(inf.FileZip, &protocolRZZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolRZZKESMBO)
+				case "ProtocolSummingupAESMBO_":
+					var protocolSummingupAESMBO protocols223.PurchaseProtocolSummingupAESMBO
+					xml.Unmarshal(inf.FileZip, &protocolSummingupAESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolSummingupAESMBO)
+				case "ProtocolSummingupKESMBO_":
+					var protocolSummingupKESMBO protocols223.PurchaseProtocolSummingupKESMBO
+					xml.Unmarshal(inf.FileZip, &protocolSummingupKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolSummingupKESMBO)
+				case "ProtocolSummingupZKESMBO_":
+					var protocolSummingupZKESMBO protocols223.PurchaseProtocolSummingupZKESMBO
+					xml.Unmarshal(inf.FileZip, &protocolSummingupZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolSummingupZKESMBO)
+				case "ProtocolSummingupZPESMBO_":
+					var protocolSummingupZPESMBO protocols223.PurchaseProtocolSummingupZPESMBO
+					xml.Unmarshal(inf.FileZip, &protocolSummingupZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolSummingupZPESMBO)
+				case "ProtocolVK_":
+					var protocolVK protocols223.PurchaseProtocolVK
+					xml.Unmarshal(inf.FileZip, &protocolVK)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolVK)
+				case "ProtocolZK_":
+					var protocolZK protocols223.PurchaseProtocolZK
+					xml.Unmarshal(inf.FileZip, &protocolZK)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolZK)
+				case "ProtocolZRPZAESMBO_":
+					var protocolZRPZAESMBO protocols223.PurchaseProtocolZRPZAESMBO
+					xml.Unmarshal(inf.FileZip, &protocolZRPZAESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolZRPZAESMBO)
+				case "ProtocolZRPZKESMBO_":
+					var protocolZRPZKESMBO protocols223.PurchaseProtocolZRPZKESMBO
+					xml.Unmarshal(inf.FileZip, &protocolZRPZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolZRPZKESMBO)
+				case "ProtocolZRPZZKESMBO_":
+					var protocolZRPZZKESMBO protocols223.PurchaseProtocolZRPZZKESMBO
+					xml.Unmarshal(inf.FileZip, &protocolZRPZZKESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolZRPZZKESMBO)
+				case "ProtocolZRPZZPESMBO_":
+					var protocolZRPZZPESMBO protocols223.PurchaseProtocolZRPZZPESMBO
+					xml.Unmarshal(inf.FileZip, &protocolZRPZZPESMBO)
+					// fmt.Println(oku504)
+					m.Save("readerXML", collection, &protocolZRPZZPESMBO)
+				default:
+					fmt.Println("Не могу определить тип извещения", typeNot)
+				}
+				fmt.Println(inf.NameFile)
+			}
+		}
+		if err := message.Ack(false); err != nil {
+			log.Printf("Error acknowledging message : %s", err)
+		} else {
+			log.Printf("Acknowledged message - %v", inf.NameFile)
+		}
+	}
+}
+
 func (c *ConsumerMQ) ChooseTemlateProtocol44(msqs <-chan amqp.Delivery, inf rabbit.InformationFile, m *mongo.MongoDb) {
 	for message := range msqs {
 		if err := json.Unmarshal(message.Body, &inf); err != nil {
@@ -290,6 +554,13 @@ func (c *ConsumerMQ) ChooseTemlateProtocol44(msqs <-chan amqp.Delivery, inf rabb
 					if err := xml.Unmarshal(inf.FileZip, &ef1); err != nil {
 						log.Println(err)
 					}
+					g := ef1.FcsProtocolEF1.ProtocolLot.Applications.Application
+					for _, value := range g {
+						var z models.Participant44FZ
+						z.Reest = ef1.FcsProtocolEF1.PurchaseNumber
+						z.Application = value
+						m.Save("readerXML", "participant", z)
+					}
 					// fmt.Println(ea44.FcsNotificationEF.PurchaseNumber)
 					m.Save("readerXML", collection, &ef1)
 				case "EF2":
@@ -303,7 +574,7 @@ func (c *ConsumerMQ) ChooseTemlateProtocol44(msqs <-chan amqp.Delivery, inf rabb
 					// fmt.Println(ea615)
 					m.Save("readerXML", collection, &ief3)
 				case "EFInv":
-					var iefinv protocols44.ProtocolEF3
+					var iefinv protocols44.ProtocolEFInv
 					xml.Unmarshal(inf.FileZip, &iefinv)
 					m.Save("readerXML", collection, &iefinv)
 				case "EFSingleApp":

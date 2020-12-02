@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:export xmlns="http://zakupki.gov.ru/oos/types/1" xmlns:ns6="http://zakupki.gov.ru/oos/CPtypes/1" xmlns:ns5="http://zakupki.gov.ru/oos/TPtypes/1" xmlns:ns8="http://zakupki.gov.ru/oos/EPtypes/1" xmlns:ns7="http://zakupki.gov.ru/oos/pprf615types/1" xmlns:ns9="http://zakupki.gov.ru/oos/SMTypes/1" xmlns:ns11="http://zakupki.gov.ru/oos/control99/1" xmlns:ns10="http://zakupki.gov.ru/oos/printform/1" xmlns:ns2="http://zakupki.gov.ru/oos/export/1" xmlns:ns4="http://zakupki.gov.ru/oos/base/1" xmlns:ns3="http://zakupki.gov.ru/oos/common/1">
+    <ns2:fcsProtocolEFSingleApp schemeVersion="10.2">
+        <id>30317541</id>
+        <purchaseNumber>0173100000120000018</purchaseNumber>
+        <protocolNumber>0173100000120000018-0</protocolNumber>
+        <place>Адрес электронной площадки в сети Интернет: www.rts-tender.ru
+</place>
+        <protocolDate>2020-10-01T12:23:35+03:00</protocolDate>
+        <signDate>2020-10-01T12:23:35+03:00</signDate>
+        <publishDate>2020-10-01T12:24:17.905+03:00</publishDate>
+        <commission>
+            <commissionName>Единая комиссия Министерства финансов Российской Федерации по осуществлению закупок товаров, работ, услуг для обеспечения государственных нужд</commissionName>
+            <commissionMembers>
+                <commissionMember>
+                    <memberNumber>3805730</memberNumber>
+                    <lastName>Федякин</lastName>
+                    <firstName>Иван</firstName>
+                    <middleName>Николаевич</middleName>
+                    <role>
+                        <id>198</id>
+                        <name>Зам. председателя комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <commissionMember>
+                    <memberNumber>1459235</memberNumber>
+                    <lastName>Гапов</lastName>
+                    <firstName>Олег</firstName>
+                    <middleName>Леонидович</middleName>
+                    <role>
+                        <id>28</id>
+                        <name>Член комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <commissionMember>
+                    <memberNumber>4236711</memberNumber>
+                    <lastName>Козлов</lastName>
+                    <firstName>Максим</firstName>
+                    <middleName>Сергеевич</middleName>
+                    <role>
+                        <id>28</id>
+                        <name>Член комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <commissionMember>
+                    <memberNumber>2287934</memberNumber>
+                    <lastName>Кузнецов</lastName>
+                    <firstName>Сергей</firstName>
+                    <middleName>Александрович</middleName>
+                    <role>
+                        <id>28</id>
+                        <name>Член комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <commissionMember>
+                    <memberNumber>2512339</memberNumber>
+                    <lastName>Миронов</lastName>
+                    <firstName>Сергей</firstName>
+                    <middleName>Владимирович</middleName>
+                    <role>
+                        <id>28</id>
+                        <name>Член комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <commissionMember>
+                    <memberNumber>4236710</memberNumber>
+                    <lastName>Трубникова</lastName>
+                    <firstName>Инна</firstName>
+                    <middleName>Владимировна</middleName>
+                    <role>
+                        <id>28</id>
+                        <name>Член комиссии</name>
+                        <rightVote>true</rightVote>
+                    </role>
+                </commissionMember>
+                <spelledMembersCount>шесть</spelledMembersCount>
+            </commissionMembers>
+            <competent>true</competent>
+        </commission>
+        <href>https://app.rts-tender.ru/files/FileDownloadHandler.ashx?FileGuid=109965ae-33c7-4680-a63c-d0d7dd7733f5</href>
+        <printForm>
+            <url>https://app.rts-tender.ru/files/FileDownloadHandler.ashx?FileGuid=109965ae-33c7-4680-a63c-d0d7dd7733f5</url>
+        </printForm>
+        <protocolPublisher>
+            <publisherOrg>
+                <regNum>01731000001</regNum>
+                <consRegistryNum>00100092</consRegistryNum>
+                <fullName>МИНИСТЕРСТВО ФИНАНСОВ РОССИЙСКОЙ ФЕДЕРАЦИИ</fullName>
+            </publisherOrg>
+            <publisherRole>CU</publisherRole>
+        </protocolPublisher>
+        <attachments>
+            <attachment>
+                <publishedContentId>912CE45A4318408C9023E3D86A47EE0A</publishedContentId>
+                <fileName>Протокол 44-20 единственной заявки ЭА 16-20.docx</fileName>
+                <fileSize>19.5 Кб</fileSize>
+                <docDescription>Протокол 44-20 единственной заявки ЭА 16-20.docx</docDescription>
+                <url>https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=912CE45A4318408C9023E3D86A47EE0A</url>
+            </attachment>
+        </attachments>
+        <protocolLot>
+            <application>
+                <journalNumber>1</journalNumber>
+                <appParticipantInfo>
+                    <ns3:legalEntityRFInfo>
+                        <ns3:fullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РУБИТЕХ"</ns3:fullName>
+                        <ns3:shortName>ООО "РУБИТЕХ"</ns3:shortName>
+                        <ns3:firmName>ООО "РУБИТЕХ"</ns3:firmName>
+                        <ns3:INN>7702404085</ns3:INN>
+                        <ns3:KPP>771301001</ns3:KPP>
+                        <ns3:ogrn>1167746693784</ns3:ogrn>
+                        <ns3:legalForm>
+                            <ns4:code>12300</ns4:code>
+                            <ns4:singularName>Общества с ограниченной ответственностью</ns4:singularName>
+                        </ns3:legalForm>
+                        <ns3:contactInfo>
+                            <ns3:orgPostAddress>127434, Российская Федерация, г.Москва, Дмитровское шоссе, д.9Б, этаж 5, помещение XIII, комната 31</ns3:orgPostAddress>
+                            <ns3:orgFactAddress>127434, Г МОСКВА, Ш ДМИТРОВСКОЕ, ДОМ 9Б, ЭТ 5 ПОМ XIII КОМ 31</ns3:orgFactAddress>
+                            <ns3:contactPersonInfo>
+                                <ns3:lastName>РЫЧАГОВА</ns3:lastName>
+                                <ns3:firstName>МАРИЯ</ns3:firstName>
+                                <ns3:middleName>ВИКТОРОВНА</ns3:middleName>
+                            </ns3:contactPersonInfo>
+                            <ns3:contactEMail>tender@rubytech.ru</ns3:contactEMail>
+                            <ns3:contactPhone>74957889999</ns3:contactPhone>
+                        </ns3:contactInfo>
+                    </ns3:legalEntityRFInfo>
+                </appParticipantInfo>
+                <appDate>2020-09-29T16:42:31+03:00</appDate>
+                <admitted>true</admitted>
+                <winnerPrice>265000000.00</winnerPrice>
+            </application>
+            <abandonedReason>
+                <code>EA44PREOR</code>
+                <objectName>fcsProtocolEFSingleApp</objectName>
+                <name>По окончании срока подачи заявок подана только одна заявка. Такая заявка признана соответствующей требованиям Федерального закона № 44-ФЗ и документации об аукционе. Электронный аукцион признан несостоявшимся по основанию, предусмотренному ч. 1 ст. 71 Федерального закона № 44-ФЗ</name>
+                <type>OR</type>
+            </abandonedReason>
+        </protocolLot>
+    </ns2:fcsProtocolEFSingleApp>
+</ns2:export>
